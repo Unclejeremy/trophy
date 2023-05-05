@@ -1,8 +1,10 @@
 const express = require("express");
 const pagesRoutes = require("./routes/pagesRoutes");
 const apiRoutes = require("./routes/apiRoutes")
+const userRoutes = require("./routes/userRoutes")
 require("dotenv").config();
 const mongoose = require("mongoose");
+
 
 // creating the server app using express
 const app = express();
@@ -14,6 +16,7 @@ app.use(express.urlencoded({extended: true}))
 app.use("/", pagesRoutes)
 // For api routes or endpoints
 app.use("/api/blogs", apiRoutes)
+app.use("/auth", userRoutes);
 // assigning the server a port
 const port = process.env.PORT||4003;
 

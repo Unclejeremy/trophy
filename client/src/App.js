@@ -9,6 +9,9 @@ import Contactpage from "./pages/contact";
 import Blogpage from "./pages/blog";
 import ErrorPage from "./pages/errorPage";
 import FooterComp from "./components/Footer/Footer";
+import SignUp from "./pages/signUp";
+import Login from "./pages/login";
+
 const App = () => {
   return (
     <div>
@@ -18,7 +21,10 @@ const App = () => {
           <Route path="/about" element={<Aboutpage />} />
           <Route path="/contact" element={<Contactpage />} />
           <Route path="/blog" element={<Blogpage />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<ErrorPage />} />
+          
         </Routes>
         <FooterComp />
     </div>

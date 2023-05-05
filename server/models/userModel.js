@@ -3,29 +3,35 @@ const { Schema } = mongoose;
 
 
 const userSchema = new Schema({
-    Firstname: {
+    firstname: {
         type: String,
         required: true,
+        trim: true,
       },
-    Lastname: {
+    lastname: {
           type: String,
           required: true,
+          trim: true,
     },
-    Email: {
+    email: {
         type: String,
         required: true,
+        unique: true,
+        trim: true,
     },
-    PhoneNumber: {
+    phoneNumber: {
         type: Number,
         required: true,
+        trim: true,
     },
-    Password: {
+    password: {
         type: String,
         required: true,
+        trim: true,
     }, 
 },{
     timestamps: true,
   })
 
 
-  module.exports = mongoose.model("blog", userSchema);
+  module.exports = mongoose.model("User", userSchema);

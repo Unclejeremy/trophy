@@ -15,6 +15,8 @@ const Nav = () => {
         <Link to="/about"style={navStyles}>About</Link>
         <Link to="/contact" style={navStyles}>Contact</Link>
         <Link to="/blog" style={navStyles}>Blog</Link>
+        <Link to="/signUp" style={navStyles}>Signup</Link>
+        <Link to="/login" style={navStyles}>LOGIN</Link>
         
     </nav>
   )
